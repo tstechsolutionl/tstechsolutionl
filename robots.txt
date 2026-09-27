@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tstechsolutionl.github.io/tstechsolutionl/sitemap.xmls
+Sitemap: https://tstechsolutionl.github.io/tstechsolutionl/sitemap.xml
