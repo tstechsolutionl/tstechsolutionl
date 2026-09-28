@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="TS TECHSOLUTIONL — Mechanical Engineering, Manufacturing, Visualization and Digital Solutions."
+  >
+
+  <meta
+    name="keywords"
+    content="mechanical engineering, CAD design, CNC machining, 3D printing, product design, 3D visualization, web development"
+  >
+
+  <meta name="author" content="TS TECHSOLUTIONL">
+
+  <meta
+    property="og:title"
+    content="TS TECHSOLUTIONL | Engineering • Manufacturing • Digital"
+  >
+
+  <meta
+    property="og:description"
+    content="Mechanical Engineering, Manufacturing, Visualization and Digital Solutions."
+  >
+
+  <meta property="og:type" content="website">
+
+  <title>TS TECHSOLUTIONL | Engineering • Manufacturing • Digital</title>
+
+  <style>
+
+    :root {
+      --bg: #060b14;
+      --bg2: #0a1220;
+      --card: #0d1726;
+      --card2: #101d2e;
+
+      --text: #f4f7fb;
+      --muted: #9eacbf;
+
+      --line: rgba(255,255,255,.10);
+
+      --blue: #168cff;
+      --cyan: #18d7ff;
+
+      --max: 1180px;
+
+      --radius: 18px;
+
+      --shadow: 0 18px 55px rgba(0,0,0,.32);
+    }
+
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+
+    html {
+      scroll-padding-top: 85px;
+    }
+
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+
+      background:
+        radial-gradient(
+          circle at 10% 10%,
+          rgba(22,140,255,.10),
+          transparent 28%
+        ),
+        radial-gradient(
+          circle at 90% 25%,
+          rgba(24,215,255,.07),
+          transparent 25%
+        ),
+        var(--bg);
+
+      color: var(--text);
+
+      line-height: 1.6;
+
+      overflow-x: hidden;
+    }
+
+
+    body::before {
+      content: "";
+
+      position: fixed;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      opacity: .18;
+
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,.025) 1px,
+          transparent 1px
+        );
+
+      background-size: 45px 45px;
+
+      z-index: -1;
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+
+    .container {
+      width: min(92%, var(--max));
+      margin: auto;
+    }
+
+
+    .section {
+      padding: 95px 0;
+    }
+
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 45px;
+    }
+
+
+    .eyebrow {
+      color: var(--cyan);
+
+      font-size: .78rem;
+
+      font-weight: 800;
+
+      letter-spacing: 2.5px;
+
+      text-transform: uppercase;
+
+      margin-bottom: 12px;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+      line-height: 1.15;
+    }
+
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+
+      margin-bottom: 15px;
+    }
+
+
+    .section-head p,
+    .muted {
+      color: var(--muted);
+    }
+
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+
+      top: 0;
+      left: 0;
+      right: 0;
+
+      z-index: 1000;
+
+      background: rgba(6,11,20,.88);
+
+      backdrop-filter: blur(16px);
+
+      border-bottom: 1px solid var(--line);
+    }
+
+
+    .nav {
+      min-height: 76px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+
+    .logo {
+      display: flex;
+
+      align-items: center;
+
+      flex-shrink: 0;
+    }
+
+
+    .logo img {
+      width: 170px;
+
+      height: auto;
+
+      display: block;
+    }
+
+
+    .nav-links {
+      display: flex;
+
+      align-items: center;
+
+      gap: 26px;
+
+      list-style: none;
+    }
+
+
+    .nav-links a {
+      color: #cbd5e3;
+
+      font-size: .92rem;
+
+      font-weight: 600;
+
+      transition: .25s;
+    }
+
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+
+    .nav-cta {
+      padding: 11px 18px;
+
+      border-radius: 10px;
+
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--cyan)
+        );
+
+      color: #03101c !important;
+
+      font-weight: 800 !important;
+    }
+
+
+    .menu-btn {
+      display: none;
+
+      border: 1px solid var(--line);
+
+      background: var(--card);
+
+      color: white;
+
+      padding: 9px 11px;
+
+      border-radius: 9px;
+
+      font-size: 1.25rem;
+
+      cursor: pointer;
+    }
+
+
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+
+      padding: 155px 0 90px;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+    }
+
+
+    .hero-grid {
+      display: grid;
+
+      grid-template-columns: 1.1fr .9fr;
+
+      gap: 55px;
+
+      align-items: center;
+    }
+
+
+    .hero h1 {
+      font-size: clamp(2.7rem, 6vw, 5.3rem);
+
+      letter-spacing: -2px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .gradient-text {
+      background:
+        linear-gradient(
+          90deg,
+          #fff,
+          #65cfff,
+          #17dfff
+        );
+
+      -webkit-background-clip: text;
+
+      background-clip: text;
+
+      color: transparent;
+    }
+
+
+    .hero-text {
+      color: var(--muted);
+
+      max-width: 650px;
+
+      font-size: 1.08rem;
+
+      margin-bottom: 30px;
+    }
+
+
+    .hero-buttons {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 14px;
+    }
+
+
+    .btn {
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      gap: 8px;
+
+      padding: 14px 21px;
+
+      border-radius: 11px;
+
+      font-weight: 800;
+
+      border: 1px solid var(--line);
+
+      transition:
+        transform .2s,
+        border-color .2s,
+        background .2s;
+    }
+
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+
+    .btn-primary {
+      background:
+        linear-gradient(
+          135deg,
+          var(--blue),
+          var(--cyan)
+        );
+
+      color: #03101c;
+
+      border: none;
+    }
+
+
+    .btn-secondary {
+      background: rgba(255,255,255,.035);
+
+      color: white;
+    }
+
+
+    .hero-panel {
+      position: relative;
+
+      min-height: 420px;
+
+      border: 1px solid var(--line);
+
+      border-radius: 28px;
+
+      background:
+        radial-gradient(
+          circle at 50% 45%,
+          rgba(22,140,255,.16),
+          transparent 35%
+        ),
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.015)
+        );
+
+      box-shadow: var(--shadow);
+
+      overflow: hidden;
+
+      display: grid;
+
+      place-items: center;
+    }
+
+
+    .machine {
+      width: 76%;
+
+      aspect-ratio: 1 / 1;
+
+      border:
+        1px solid
+        rgba(24,215,255,.35);
+
+      border-radius: 22px;
+
+      position: relative;
+
+      transform:
+        perspective(800px)
+        rotateX(8deg)
+        rotateY(-10deg);
+
+      box-shadow:
+        inset 0 0 60px
+        rgba(22,140,255,.08),
+
+        0 0 60px
+        rgba(22,140,255,.08);
+    }
+
+
+    .machine::before,
+    .machine::after {
+      content: "";
+
+      position: absolute;
+
+      border:
+        2px solid
+        rgba(24,215,255,.55);
+    }
+
+
+    .machine::before {
+      left: 12%;
+
+      right: 12%;
+
+      top: 25%;
+
+      height: 4px;
+
+      box-shadow:
+        0 135px 0
+        rgba(24,215,255,.45);
+    }
+
+
+    .machine::after {
+      top: 15%;
+
+      bottom: 15%;
+
+      left: 48%;
+
+      width: 4px;
+    }
+
+
+    .machine-core {
+      position: absolute;
+
+      width: 90px;
+
+      height: 90px;
+
+      left: calc(50% - 45px);
+
+      top: calc(50% - 45px);
+
+      border-radius: 14px;
+
+      background:
+        linear-gradient(
+          145deg,
+          #17283e,
+          #08121e
+        );
+
+      border:
+        1px solid
+        rgba(255,255,255,.17);
+
+      box-shadow:
+        0 0 35px
+        rgba(24,215,255,.2);
+    }
+
+
+    .machine-core::after {
+      content: "";
+
+      position: absolute;
+
+      width: 22px;
+
+      height: 22px;
+
+      border-radius: 50%;
+
+      background: var(--cyan);
+
+      left: 34px;
+
+      top: 34px;
+
+      box-shadow:
+        0 0 25px
+        var(--cyan);
+    }
+
+
+    .hero-badge {
+      position: absolute;
+
+      bottom: 22px;
+
+      left: 22px;
+
+      right: 22px;
+
+      padding: 15px 18px;
+
+      background: rgba(4,10,18,.76);
+
+      border: 1px solid var(--line);
+
+      border-radius: 13px;
+
+      color: #d8e2ef;
+
+      font-size: .9rem;
+    }
+
+
+
+    /* =========================
+       SERVICE CARDS
+    ========================= */
+
+    .cards {
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 18px;
+    }
+
+
+    .card {
+      background:
+        linear-gradient(
+          145deg,
+          rgba(255,255,255,.055),
+          rgba(255,255,255,.018)
+        );
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius:
+        var(--radius);
+
+      padding: 27px;
+
+      box-shadow:
+        0 10px 35px
+        rgba(0,0,0,.15);
+
+      transition: .25s;
+    }
+
+
+    .card:hover {
+      transform:
+        translateY(-5px);
+
+      border-color:
+        rgba(24,215,255,.38);
+    }
+
+
+    .icon {
+      width: 48px;
+
+      height: 48px;
+
+      display: grid;
+
+      place-items: center;
+
+      border-radius: 12px;
+
+      background:
+        rgba(22,140,255,.11);
+
+      border:
+        1px solid
+        rgba(24,215,255,.18);
+
+      font-size: 1.35rem;
+
+      margin-bottom: 20px;
+    }
+
+
+    .card h3 {
+      margin-bottom: 10px;
+
+      font-size: 1.15rem;
+    }
+
+
+    .card p {
+      color: var(--muted);
+
+      font-size: .91rem;
+    }
+
+
+
+    /* =========================
+       CAPABILITIES
+    ========================= */
+
+    .capability-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 12px;
+    }
+
+
+    .capability {
+      border:
+        1px solid
+        var(--line);
+
+      background:
+        rgba(255,255,255,.025);
+
+      padding: 18px;
+
+      border-radius: 12px;
+
+      color: #d9e2ee;
+    }
+
+
+    .capability span {
+      color: var(--cyan);
+
+      margin-right: 8px;
+    }
+
+
+
+    /* =========================
+       PROCESS
+    ========================= */
+
+    .process {
+      display: grid;
+
+      grid-template-columns:
+        repeat(6, 1fr);
+
+      gap: 10px;
+    }
+
+
+    .process-item {
+      position: relative;
+
+      padding: 24px 14px;
+
+      text-align: center;
+
+      border:
+        1px solid
+        var(--line);
+
+      background:
+        rgba(255,255,255,.025);
+
+      border-radius: 14px;
+    }
+
+
+    .process-num {
+      display: block;
+
+      color: var(--cyan);
+
+      font-size: .78rem;
+
+      font-weight: 800;
+
+      margin-bottom: 10px;
+
+      letter-spacing: 1px;
+    }
+
+
+    .process-item strong {
+      font-size: .9rem;
+    }
+
+
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
+
+
+    .project {
+      min-height: 250px;
+
+      padding: 28px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          to top,
+          rgba(3,8,15,.95),
+          rgba(3,8,15,.35)
+        ),
+        radial-gradient(
+          circle at 75% 25%,
+          rgba(24,215,255,.16),
+          transparent 35%
+        ),
+        #0c1726;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: flex-end;
+
+      overflow: hidden;
+
+      position: relative;
+    }
+
+
+    .project::before {
+      content: "";
+
+      position: absolute;
+
+      width: 150px;
+
+      height: 150px;
+
+      right: -45px;
+
+      top: -45px;
+
+      border:
+        1px solid
+        rgba(24,215,255,.22);
+
+      transform: rotate(45deg);
+    }
+
+
+    .project h3,
+    .project p {
+      position: relative;
+
+      z-index: 1;
+    }
+
+
+    .project h3 {
+      margin-bottom: 8px;
+    }
+
+
+    .project p {
+      color: var(--muted);
+
+      font-size: .9rem;
+    }
+
+
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 45px;
+
+      align-items: start;
+    }
+
+
+    .about-copy p {
+      color: var(--muted);
+
+      margin-bottom: 18px;
+    }
+
+
+    .about-points {
+      display: grid;
+
+      gap: 12px;
+    }
+
+
+    .about-point {
+      padding: 18px;
+
+      border-left:
+        3px solid
+        var(--cyan);
+
+      background:
+        rgba(255,255,255,.025);
+
+      border-radius:
+        0 12px 12px 0;
+    }
+
+
+    .about-point strong {
+      display: block;
+
+      margin-bottom: 4px;
+    }
+
+
+    .about-point span {
+      color: var(--muted);
+
+      font-size: .9rem;
+    }
+
+
+
+    /* =========================
+       CAREERS
+    ========================= */
+
+    .career-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 18px;
+    }
+
+
+    .career {
+      padding: 23px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 15px;
+
+      background:
+        rgba(255,255,255,.025);
+    }
+
+
+    .career h3 {
+      margin-bottom: 6px;
+    }
+
+
+    .career p {
+      color: var(--muted);
+
+      font-size: .9rem;
+    }
+
+
+    .career-cta {
+      margin-top: 30px;
+
+      padding: 30px;
+
+      border:
+        1px solid
+        rgba(24,215,255,.25);
+
+      border-radius: 18px;
+
+      background:
+        linear-gradient(
+          135deg,
+          rgba(22,140,255,.09),
+          rgba(24,215,255,.035)
+        );
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+
+    .career-cta p {
+      color: var(--muted);
+
+      margin-top: 5px;
+    }
+
+
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      text-align: center;
+
+      padding: 65px 25px;
+
+      border:
+        1px solid
+        var(--line);
+
+      border-radius: 25px;
+
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          rgba(22,140,255,.14),
+          transparent 40%
+        ),
+        rgba(255,255,255,.025);
+    }
+
+
+    .email {
+      display: inline-block;
+
+      margin: 20px 0 28px;
+
+      color: var(--cyan);
+
+      font-size:
+        clamp(
+          1rem,
+          3vw,
+          1.45rem
+        );
+
+      font-weight: 800;
+
+      word-break: break-word;
+    }
+
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      border-top:
+        1px solid
+        var(--line);
+
+      padding: 55px 0 25px;
+
+      background:
+        rgba(0,0,0,.18);
+    }
+
+
+    .footer-grid {
+      display: grid;
+
+      grid-template-columns:
+        1.5fr 1fr 1fr;
+
+      gap: 45px;
+
+      margin-bottom: 45px;
+    }
+
+
+    .footer-logo img {
+      width: 160px;
+
+      margin-bottom: 15px;
+    }
+
+
+    .footer-grid p {
+      color: var(--muted);
+
+      max-width: 420px;
+
+      font-size: .9rem;
+    }
+
+
+    .footer-title {
+      color: white;
+
+      font-weight: 800;
+
+      margin-bottom: 15px;
+    }
+
+
+    .footer-links {
+      display: grid;
+
+      gap: 8px;
+    }
+
+
+    .footer-links a {
+      color: var(--muted);
+
+      font-size: .9rem;
+    }
+
+
+    .footer-links a:hover {
+      color: var(--cyan);
+    }
+
+
+    .copyright {
+      border-top:
+        1px solid
+        var(--line);
+
+      padding-top: 22px;
+
+      color: #748196;
+
+      font-size: .82rem;
+
+      text-align: center;
+    }
+
+
+
+    /* =========================
+       TABLET
+    ========================= */
+
+    @media (max-width: 1000px) {
+
+      .cards {
+        grid-template-columns:
+          repeat(2, 1fr);
+      }
+
+
+      .process {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+
+      .project-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+    }
+
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 760px) {
+
+      .section {
+        padding: 72px 0;
+      }
+
+
+      .nav {
+        min-height: 68px;
+      }
+
+
+      .logo img {
+        width: 145px;
+      }
+
+
+      .menu-btn {
+        display: block;
+      }
+
+
+      .nav-links {
+        display: none;
+
+        position: absolute;
+
+        left: 4%;
+
+        right: 4%;
+
+        top: 72px;
+
+        padding: 18px;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        background: #0a1320;
+
+        border:
+          1px solid
+          var(--line);
+
+        border-radius: 14px;
+
+        box-shadow: var(--shadow);
+      }
+
+
+      .nav-links.active {
+        display: flex;
+      }
+
+
+      .nav-links a {
+        display: block;
+
+        padding: 12px;
+      }
+
+
+      .hero {
+        padding-top: 125px;
+      }
+
+
+      .hero-grid,
+      .about-grid,
+      .career-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .hero-panel {
+        min-height: 330px;
+      }
+
+
+      .capability-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+
+      .footer-grid {
+        grid-template-columns:
+          1fr 1fr;
+      }
+
+
+      .footer-grid > div:first-child {
+        grid-column: 1 / -1;
+      }
+
+
+      .career-cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+      }
+
+    }
+
+
+
+    /* =========================
+       SMALL MOBILE
+    ========================= */
+
+    @media (max-width: 480px) {
+
+      .container {
+        width: 90%;
+      }
+
+
+      .logo img {
+        width: 135px;
+      }
+
+
+      .hero h1 {
+        font-size: 2.55rem;
+      }
+
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+
+      .btn {
+        width: 100%;
+      }
+
+
+      .cards,
+      .capability-grid,
+      .project-grid,
+      .process,
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      .footer-grid > div:first-child {
+        grid-column: auto;
+      }
+
+
+      .hero-panel {
+        min-height: 285px;
+      }
+
+
+      .machine {
+        width: 78%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
+
+  <header>
+
+    <div class="container nav">
+
+      <a
+        href="#home"
+        class="logo"
+        aria-label="TS TECHSOLUTIONL Home"
+      >
+
+        <img
+          src="logo.png"
+          alt="TS TECHSOLUTIONL Logo"
+        >
+
+      </a>
+
+
+      <button
+        class="menu-btn"
+        id="menuBtn"
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+
+      <ul
+        class="nav-links"
+        id="navLinks"
+      >
+
+        <li>
+          <a href="#home">
+            Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#services">
+            Services
+          </a>
+        </li>
+
+        <li>
+          <a href="#projects">
+            Projects
+          </a>
+        </li>
+
+        <li>
+          <a href="#careers">
+            Careers
+          </a>
+        </li>
+
+        <li>
+          <a href="#about">
+            About
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="#contact"
+            class="nav-cta"
+          >
+            Get a Quote
+          </a>
+        </li>
+
+      </ul>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       MAIN
+  ========================= -->
+
+  <main id="home">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <div class="container hero-grid">
+
+
+        <div>
+
+          <div class="eyebrow">
+            Engineering • Manufacturing • Digital
+          </div>
+
+
+          <h1>
+
+            Turning Engineering
+
+            <span class="gradient-text">
+              Ideas Into Reality.
+            </span>
+
+          </h1>
+
+
+          <p class="hero-text">
+
+            TS TECHSOLUTIONL combines mechanical engineering,
+            manufacturing, product visualization and digital
+            technology to transform concepts into practical
+            solutions.
+
+          </p>
+
+
+          <div class="hero-buttons">
+
+            <a
+              class="btn btn-primary"
+              href="#contact"
+            >
+              Start a Project →
+            </a>
