@@ -3,56 +3,33 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="bPe6AeU_FXPkcaeKCfSKQvLNsWVxwtH6AG3gF_Pdq_4">
 
-  <meta
-    name="description"
-    content="TS TECHSOLUTIONL — Mechanical Engineering, Manufacturing, Visualization and Digital Solutions."
-  >
-
-  <meta
-    name="keywords"
-    content="mechanical engineering, CAD design, CNC machining, 3D printing, product design, 3D visualization, web development"
-  >
-
+  <meta name="description" content="TS TECHSOLUTIONL — Mechanical Engineering, Manufacturing, Visualization and Digital Solutions.">
+  <meta name="keywords" content="mechanical engineering, CAD design, CNC machining, 3D printing, product design, 3D visualization, web development">
   <meta name="author" content="TS TECHSOLUTIONL">
 
-  <meta
-    property="og:title"
-    content="TS TECHSOLUTIONL | Engineering • Manufacturing • Digital"
-  >
-
-  <meta
-    property="og:description"
-    content="Mechanical Engineering, Manufacturing, Visualization and Digital Solutions."
-  >
-
+  <meta property="og:title" content="TS TECHSOLUTIONL | Engineering • Manufacturing • Digital">
+  <meta property="og:description" content="Mechanical Engineering, Manufacturing, Visualization and Digital Solutions.">
   <meta property="og:type" content="website">
 
   <title>TS TECHSOLUTIONL | Engineering • Manufacturing • Digital</title>
 
   <style>
-
     :root {
       --bg: #060b14;
       --bg2: #0a1220;
       --card: #0d1726;
       --card2: #101d2e;
-
       --text: #f4f7fb;
       --muted: #9eacbf;
-
       --line: rgba(255,255,255,.10);
-
       --blue: #168cff;
       --cyan: #18d7ff;
-
       --max: 1180px;
-
       --radius: 18px;
-
       --shadow: 0 18px 55px rgba(0,0,0,.32);
     }
-
 
     * {
       margin: 0;
@@ -61,1182 +38,650 @@
       scroll-behavior: smooth;
     }
 
-
     html {
       scroll-padding-top: 85px;
     }
 
-
     body {
       font-family: Arial, Helvetica, sans-serif;
-
       background:
-        radial-gradient(
-          circle at 10% 10%,
-          rgba(22,140,255,.10),
-          transparent 28%
-        ),
-        radial-gradient(
-          circle at 90% 25%,
-          rgba(24,215,255,.07),
-          transparent 25%
-        ),
+        radial-gradient(circle at 10% 10%, rgba(22,140,255,.10), transparent 28%),
+        radial-gradient(circle at 90% 25%, rgba(24,215,255,.07), transparent 25%),
         var(--bg);
-
       color: var(--text);
-
       line-height: 1.6;
-
       overflow-x: hidden;
     }
 
-
     body::before {
       content: "";
-
       position: fixed;
-
       inset: 0;
-
       pointer-events: none;
-
       opacity: .18;
-
       background-image:
-        linear-gradient(
-          rgba(255,255,255,.025) 1px,
-          transparent 1px
-        ),
-        linear-gradient(
-          90deg,
-          rgba(255,255,255,.025) 1px,
-          transparent 1px
-        );
-
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
       background-size: 45px 45px;
-
       z-index: -1;
     }
-
 
     a {
       color: inherit;
       text-decoration: none;
     }
 
-
     img {
       max-width: 100%;
     }
-
 
     .container {
       width: min(92%, var(--max));
       margin: auto;
     }
 
-
     .section {
       padding: 95px 0;
     }
-
 
     .section-head {
       max-width: 760px;
       margin-bottom: 45px;
     }
 
-
     .eyebrow {
       color: var(--cyan);
-
       font-size: .78rem;
-
       font-weight: 800;
-
       letter-spacing: 2.5px;
-
       text-transform: uppercase;
-
       margin-bottom: 12px;
     }
 
-
-    h1,
-    h2,
-    h3 {
+    h1, h2, h3 {
       line-height: 1.15;
     }
 
-
     h2 {
       font-size: clamp(2rem, 4vw, 3.1rem);
-
       margin-bottom: 15px;
     }
-
 
     .section-head p,
     .muted {
       color: var(--muted);
     }
 
-
-
-    /* =========================
-       HEADER
-    ========================= */
-
+    /* HEADER */
     header {
       position: fixed;
-
       top: 0;
       left: 0;
       right: 0;
-
       z-index: 1000;
-
       background: rgba(6,11,20,.88);
-
       backdrop-filter: blur(16px);
-
       border-bottom: 1px solid var(--line);
     }
 
-
     .nav {
       min-height: 76px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 25px;
     }
 
-
     .logo {
       display: flex;
-
       align-items: center;
-
       flex-shrink: 0;
     }
 
-
     .logo img {
       width: 170px;
-
       height: auto;
-
       display: block;
     }
 
-
     .nav-links {
       display: flex;
-
       align-items: center;
-
       gap: 26px;
-
       list-style: none;
     }
 
-
     .nav-links a {
       color: #cbd5e3;
-
       font-size: .92rem;
-
       font-weight: 600;
-
       transition: .25s;
     }
-
 
     .nav-links a:hover {
       color: white;
     }
 
-
     .nav-cta {
       padding: 11px 18px;
-
       border-radius: 10px;
-
-      background:
-        linear-gradient(
-          135deg,
-          var(--blue),
-          var(--cyan)
-        );
-
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
       color: #03101c !important;
-
       font-weight: 800 !important;
     }
 
-
     .menu-btn {
       display: none;
-
       border: 1px solid var(--line);
-
       background: var(--card);
-
       color: white;
-
       padding: 9px 11px;
-
       border-radius: 9px;
-
       font-size: 1.25rem;
-
       cursor: pointer;
     }
 
-
-
-    /* =========================
-       HERO
-    ========================= */
-
+    /* HERO */
     .hero {
       min-height: 100vh;
-
       padding: 155px 0 90px;
-
       display: flex;
-
       align-items: center;
-
       position: relative;
     }
 
-
     .hero-grid {
       display: grid;
-
       grid-template-columns: 1.1fr .9fr;
-
       gap: 55px;
-
       align-items: center;
     }
-
 
     .hero h1 {
       font-size: clamp(2.7rem, 6vw, 5.3rem);
-
       letter-spacing: -2px;
-
       margin-bottom: 25px;
     }
 
-
     .gradient-text {
-      background:
-        linear-gradient(
-          90deg,
-          #fff,
-          #65cfff,
-          #17dfff
-        );
-
+      background: linear-gradient(90deg, #fff, #65cfff, #17dfff);
       -webkit-background-clip: text;
-
       background-clip: text;
-
       color: transparent;
     }
 
-
     .hero-text {
       color: var(--muted);
-
       max-width: 650px;
-
       font-size: 1.08rem;
-
       margin-bottom: 30px;
     }
 
-
     .hero-buttons {
       display: flex;
-
       flex-wrap: wrap;
-
       gap: 14px;
     }
 
-
     .btn {
       display: inline-flex;
-
       align-items: center;
-
       justify-content: center;
-
       gap: 8px;
-
       padding: 14px 21px;
-
       border-radius: 11px;
-
       font-weight: 800;
-
       border: 1px solid var(--line);
-
-      transition:
-        transform .2s,
-        border-color .2s,
-        background .2s;
+      transition: transform .2s, border-color .2s, background .2s;
     }
-
 
     .btn:hover {
       transform: translateY(-2px);
     }
 
-
     .btn-primary {
-      background:
-        linear-gradient(
-          135deg,
-          var(--blue),
-          var(--cyan)
-        );
-
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
       color: #03101c;
-
       border: none;
     }
 
-
     .btn-secondary {
       background: rgba(255,255,255,.035);
-
       color: white;
     }
 
-
     .hero-panel {
       position: relative;
-
       min-height: 420px;
-
       border: 1px solid var(--line);
-
       border-radius: 28px;
-
       background:
-        radial-gradient(
-          circle at 50% 45%,
-          rgba(22,140,255,.16),
-          transparent 35%
-        ),
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.055),
-          rgba(255,255,255,.015)
-        );
-
+        radial-gradient(circle at 50% 45%, rgba(22,140,255,.16), transparent 35%),
+        linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.015));
       box-shadow: var(--shadow);
-
       overflow: hidden;
-
       display: grid;
-
       place-items: center;
     }
 
-
     .machine {
       width: 76%;
-
       aspect-ratio: 1 / 1;
-
-      border:
-        1px solid
-        rgba(24,215,255,.35);
-
+      border: 1px solid rgba(24,215,255,.35);
       border-radius: 22px;
-
       position: relative;
-
-      transform:
-        perspective(800px)
-        rotateX(8deg)
-        rotateY(-10deg);
-
-      box-shadow:
-        inset 0 0 60px
-        rgba(22,140,255,.08),
-
-        0 0 60px
-        rgba(22,140,255,.08);
+      transform: perspective(800px) rotateX(8deg) rotateY(-10deg);
+      box-shadow: inset 0 0 60px rgba(22,140,255,.08), 0 0 60px rgba(22,140,255,.08);
     }
-
 
     .machine::before,
     .machine::after {
       content: "";
-
       position: absolute;
-
-      border:
-        2px solid
-        rgba(24,215,255,.55);
+      border: 2px solid rgba(24,215,255,.55);
     }
-
 
     .machine::before {
       left: 12%;
-
       right: 12%;
-
       top: 25%;
-
       height: 4px;
-
-      box-shadow:
-        0 135px 0
-        rgba(24,215,255,.45);
+      box-shadow: 0 135px 0 rgba(24,215,255,.45);
     }
-
 
     .machine::after {
       top: 15%;
-
       bottom: 15%;
-
       left: 48%;
-
       width: 4px;
     }
 
-
     .machine-core {
       position: absolute;
-
       width: 90px;
-
       height: 90px;
-
       left: calc(50% - 45px);
-
       top: calc(50% - 45px);
-
       border-radius: 14px;
-
-      background:
-        linear-gradient(
-          145deg,
-          #17283e,
-          #08121e
-        );
-
-      border:
-        1px solid
-        rgba(255,255,255,.17);
-
-      box-shadow:
-        0 0 35px
-        rgba(24,215,255,.2);
+      background: linear-gradient(145deg, #17283e, #08121e);
+      border: 1px solid rgba(255,255,255,.17);
+      box-shadow: 0 0 35px rgba(24,215,255,.2);
     }
-
 
     .machine-core::after {
       content: "";
-
       position: absolute;
-
       width: 22px;
-
       height: 22px;
-
       border-radius: 50%;
-
       background: var(--cyan);
-
       left: 34px;
-
       top: 34px;
-
-      box-shadow:
-        0 0 25px
-        var(--cyan);
+      box-shadow: 0 0 25px var(--cyan);
     }
-
 
     .hero-badge {
       position: absolute;
-
       bottom: 22px;
-
       left: 22px;
-
       right: 22px;
-
       padding: 15px 18px;
-
       background: rgba(4,10,18,.76);
-
       border: 1px solid var(--line);
-
       border-radius: 13px;
-
       color: #d8e2ef;
-
       font-size: .9rem;
     }
 
-
-
-    /* =========================
-       SERVICE CARDS
-    ========================= */
-
+    /* CARDS */
     .cards {
       display: grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
+      grid-template-columns: repeat(4, 1fr);
       gap: 18px;
     }
 
-
     .card {
-      background:
-        linear-gradient(
-          145deg,
-          rgba(255,255,255,.055),
-          rgba(255,255,255,.018)
-        );
-
-      border:
-        1px solid
-        var(--line);
-
-      border-radius:
-        var(--radius);
-
+      background: linear-gradient(145deg, rgba(255,255,255,.055), rgba(255,255,255,.018));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
       padding: 27px;
-
-      box-shadow:
-        0 10px 35px
-        rgba(0,0,0,.15);
-
+      box-shadow: 0 10px 35px rgba(0,0,0,.15);
       transition: .25s;
     }
 
-
     .card:hover {
-      transform:
-        translateY(-5px);
-
-      border-color:
-        rgba(24,215,255,.38);
+      transform: translateY(-5px);
+      border-color: rgba(24,215,255,.38);
     }
-
 
     .icon {
       width: 48px;
-
       height: 48px;
-
       display: grid;
-
       place-items: center;
-
       border-radius: 12px;
-
-      background:
-        rgba(22,140,255,.11);
-
-      border:
-        1px solid
-        rgba(24,215,255,.18);
-
+      background: rgba(22,140,255,.11);
+      border: 1px solid rgba(24,215,255,.18);
       font-size: 1.35rem;
-
       margin-bottom: 20px;
     }
 
-
     .card h3 {
       margin-bottom: 10px;
-
       font-size: 1.15rem;
     }
 
-
     .card p {
       color: var(--muted);
-
       font-size: .91rem;
     }
 
-
-
-    /* =========================
-       CAPABILITIES
-    ========================= */
-
+    /* CAPABILITIES */
     .capability-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 12px;
     }
 
-
     .capability {
-      border:
-        1px solid
-        var(--line);
-
-      background:
-        rgba(255,255,255,.025);
-
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
       padding: 18px;
-
       border-radius: 12px;
-
       color: #d9e2ee;
     }
 
-
     .capability span {
       color: var(--cyan);
-
       margin-right: 8px;
     }
 
-
-
-    /* =========================
-       PROCESS
-    ========================= */
-
+    /* PROCESS */
     .process {
       display: grid;
-
-      grid-template-columns:
-        repeat(6, 1fr);
-
+      grid-template-columns: repeat(6, 1fr);
       gap: 10px;
     }
 
-
     .process-item {
       position: relative;
-
       padding: 24px 14px;
-
       text-align: center;
-
-      border:
-        1px solid
-        var(--line);
-
-      background:
-        rgba(255,255,255,.025);
-
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
       border-radius: 14px;
     }
 
-
     .process-num {
       display: block;
-
       color: var(--cyan);
-
       font-size: .78rem;
-
       font-weight: 800;
-
       margin-bottom: 10px;
-
       letter-spacing: 1px;
     }
-
 
     .process-item strong {
       font-size: .9rem;
     }
 
-
-
-    /* =========================
-       PROJECTS
-    ========================= */
-
+    /* PROJECTS */
     .project-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
+      grid-template-columns: repeat(3, 1fr);
       gap: 20px;
     }
 
-
     .project {
       min-height: 250px;
-
       padding: 28px;
-
-      border:
-        1px solid
-        var(--line);
-
+      border: 1px solid var(--line);
       border-radius: 18px;
-
       background:
-        linear-gradient(
-          to top,
-          rgba(3,8,15,.95),
-          rgba(3,8,15,.35)
-        ),
-        radial-gradient(
-          circle at 75% 25%,
-          rgba(24,215,255,.16),
-          transparent 35%
-        ),
+        linear-gradient(to top, rgba(3,8,15,.95), rgba(3,8,15,.35)),
+        radial-gradient(circle at 75% 25%, rgba(24,215,255,.16), transparent 35%),
         #0c1726;
-
       display: flex;
-
       flex-direction: column;
-
       justify-content: flex-end;
-
       overflow: hidden;
-
       position: relative;
     }
 
-
     .project::before {
       content: "";
-
       position: absolute;
-
       width: 150px;
-
       height: 150px;
-
       right: -45px;
-
       top: -45px;
-
-      border:
-        1px solid
-        rgba(24,215,255,.22);
-
+      border: 1px solid rgba(24,215,255,.22);
       transform: rotate(45deg);
     }
-
 
     .project h3,
     .project p {
       position: relative;
-
       z-index: 1;
     }
-
 
     .project h3 {
       margin-bottom: 8px;
     }
 
-
     .project p {
       color: var(--muted);
-
       font-size: .9rem;
     }
 
-
-
-    /* =========================
-       ABOUT
-    ========================= */
-
+    /* ABOUT */
     .about-grid {
       display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
+      grid-template-columns: 1fr 1fr;
       gap: 45px;
-
       align-items: start;
     }
 
-
     .about-copy p {
       color: var(--muted);
-
       margin-bottom: 18px;
     }
 
-
     .about-points {
       display: grid;
-
       gap: 12px;
     }
 
-
     .about-point {
       padding: 18px;
-
-      border-left:
-        3px solid
-        var(--cyan);
-
-      background:
-        rgba(255,255,255,.025);
-
-      border-radius:
-        0 12px 12px 0;
+      border-left: 3px solid var(--cyan);
+      background: rgba(255,255,255,.025);
+      border-radius: 0 12px 12px 0;
     }
-
 
     .about-point strong {
       display: block;
-
       margin-bottom: 4px;
     }
 
-
     .about-point span {
       color: var(--muted);
-
       font-size: .9rem;
     }
 
-
-
-    /* =========================
-       CAREERS
-    ========================= */
-
+    /* CAREERS */
     .career-grid {
       display: grid;
-
-      grid-template-columns:
-        1fr 1fr;
-
+      grid-template-columns: 1fr 1fr;
       gap: 18px;
     }
 
-
     .career {
       padding: 23px;
-
-      border:
-        1px solid
-        var(--line);
-
+      border: 1px solid var(--line);
       border-radius: 15px;
-
-      background:
-        rgba(255,255,255,.025);
+      background: rgba(255,255,255,.025);
     }
-
 
     .career h3 {
       margin-bottom: 6px;
     }
 
-
     .career p {
       color: var(--muted);
-
       font-size: .9rem;
     }
-
 
     .career-cta {
       margin-top: 30px;
-
       padding: 30px;
-
-      border:
-        1px solid
-        rgba(24,215,255,.25);
-
+      border: 1px solid rgba(24,215,255,.25);
       border-radius: 18px;
-
-      background:
-        linear-gradient(
-          135deg,
-          rgba(22,140,255,.09),
-          rgba(24,215,255,.035)
-        );
-
+      background: linear-gradient(135deg, rgba(22,140,255,.09), rgba(24,215,255,.035));
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 25px;
     }
 
-
     .career-cta p {
       color: var(--muted);
-
       margin-top: 5px;
     }
 
-
-
-    /* =========================
-       CONTACT
-    ========================= */
-
+    /* CONTACT */
     .contact-box {
       text-align: center;
-
       padding: 65px 25px;
-
-      border:
-        1px solid
-        var(--line);
-
+      border: 1px solid var(--line);
       border-radius: 25px;
-
       background:
-        radial-gradient(
-          circle at 50% 0%,
-          rgba(22,140,255,.14),
-          transparent 40%
-        ),
+        radial-gradient(circle at 50% 0%, rgba(22,140,255,.14), transparent 40%),
         rgba(255,255,255,.025);
     }
 
-
     .email {
       display: inline-block;
-
       margin: 20px 0 28px;
-
       color: var(--cyan);
-
-      font-size:
-        clamp(
-          1rem,
-          3vw,
-          1.45rem
-        );
-
+      font-size: clamp(1rem, 3vw, 1.45rem);
       font-weight: 800;
-
       word-break: break-word;
     }
 
-
-
-    /* =========================
-       FOOTER
-    ========================= */
-
+    /* FOOTER */
     footer {
-      border-top:
-        1px solid
-        var(--line);
-
+      border-top: 1px solid var(--line);
       padding: 55px 0 25px;
-
-      background:
-        rgba(0,0,0,.18);
+      background: rgba(0,0,0,.18);
     }
-
 
     .footer-grid {
       display: grid;
-
-      grid-template-columns:
-        1.5fr 1fr 1fr;
-
+      grid-template-columns: 1.5fr 1fr 1fr;
       gap: 45px;
-
       margin-bottom: 45px;
     }
 
-
     .footer-logo img {
       width: 160px;
-
       margin-bottom: 15px;
     }
-
 
     .footer-grid p {
       color: var(--muted);
-
       max-width: 420px;
-
       font-size: .9rem;
     }
-
 
     .footer-title {
       color: white;
-
       font-weight: 800;
-
       margin-bottom: 15px;
     }
 
-
     .footer-links {
       display: grid;
-
       gap: 8px;
     }
 
-
     .footer-links a {
       color: var(--muted);
-
       font-size: .9rem;
     }
-
 
     .footer-links a:hover {
       color: var(--cyan);
     }
 
-
     .copyright {
-      border-top:
-        1px solid
-        var(--line);
-
+      border-top: 1px solid var(--line);
       padding-top: 22px;
-
       color: #748196;
-
       font-size: .82rem;
-
       text-align: center;
     }
 
-
-
-    /* =========================
-       TABLET
-    ========================= */
-
+    /* MOBILE */
     @media (max-width: 1000px) {
-
       .cards {
-        grid-template-columns:
-          repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
-
 
       .process {
-        grid-template-columns:
-          repeat(3, 1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
-
 
       .project-grid {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
-
     }
 
-
-
-    /* =========================
-       MOBILE
-    ========================= */
-
     @media (max-width: 760px) {
-
       .section {
         padding: 72px 0;
       }
-
 
       .nav {
         min-height: 68px;
       }
 
-
       .logo img {
         width: 145px;
       }
-
 
       .menu-btn {
         display: block;
       }
 
-
       .nav-links {
         display: none;
-
         position: absolute;
-
         left: 4%;
-
         right: 4%;
-
         top: 72px;
-
         padding: 18px;
-
         flex-direction: column;
-
         align-items: stretch;
-
         gap: 4px;
-
         background: #0a1320;
-
-        border:
-          1px solid
-          var(--line);
-
+        border: 1px solid var(--line);
         border-radius: 14px;
-
         box-shadow: var(--shadow);
       }
-
 
       .nav-links.active {
         display: flex;
       }
 
-
       .nav-links a {
         display: block;
-
         padding: 12px;
       }
-
 
       .hero {
         padding-top: 125px;
       }
-
 
       .hero-grid,
       .about-grid,
@@ -1244,69 +689,48 @@
         grid-template-columns: 1fr;
       }
 
-
       .hero-panel {
         min-height: 330px;
       }
 
-
       .capability-grid {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
-
 
       .footer-grid {
-        grid-template-columns:
-          1fr 1fr;
+        grid-template-columns: 1fr 1fr;
       }
-
 
       .footer-grid > div:first-child {
         grid-column: 1 / -1;
       }
 
-
       .career-cta {
         flex-direction: column;
-
         align-items: flex-start;
       }
-
     }
 
-
-
-    /* =========================
-       SMALL MOBILE
-    ========================= */
-
     @media (max-width: 480px) {
-
       .container {
         width: 90%;
       }
-
 
       .logo img {
         width: 135px;
       }
 
-
       .hero h1 {
         font-size: 2.55rem;
       }
-
 
       .hero-buttons {
         flex-direction: column;
       }
 
-
       .btn {
         width: 100%;
       }
-
 
       .cards,
       .capability-grid,
@@ -1316,160 +740,459 @@
         grid-template-columns: 1fr;
       }
 
-
       .footer-grid > div:first-child {
         grid-column: auto;
       }
-
 
       .hero-panel {
         min-height: 285px;
       }
 
-
       .machine {
         width: 78%;
       }
-
     }
-
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================= -->
-
+  <!-- HEADER -->
   <header>
-
     <div class="container nav">
-
-      <a
-        href="#home"
-        class="logo"
-        aria-label="TS TECHSOLUTIONL Home"
-      >
-
-        <img
-          src="logo.png"
-          alt="TS TECHSOLUTIONL Logo"
-        >
-
+      <a href="#home" class="logo" aria-label="TS TECHSOLUTIONL Home">
+        <img src="logo.png" alt="TS TECHSOLUTIONL Logo">
       </a>
 
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
 
-      <button
-        class="menu-btn"
-        id="menuBtn"
-        aria-label="Open menu"
-      >
-        ☰
-      </button>
-
-
-      <ul
-        class="nav-links"
-        id="navLinks"
-      >
-
-        <li>
-          <a href="#home">
-            Home
-          </a>
-        </li>
-
-        <li>
-          <a href="#services">
-            Services
-          </a>
-        </li>
-
-        <li>
-          <a href="#projects">
-            Projects
-          </a>
-        </li>
-
-        <li>
-          <a href="#careers">
-            Careers
-          </a>
-        </li>
-
-        <li>
-          <a href="#about">
-            About
-          </a>
-        </li>
-
-        <li>
-          <a
-            href="#contact"
-            class="nav-cta"
-          >
-            Get a Quote
-          </a>
-        </li>
-
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#careers">Careers</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
       </ul>
-
     </div>
-
   </header>
 
-
-
-  <!-- =========================
-       MAIN
-  ========================= -->
-
+  <!-- HERO -->
   <main id="home">
-
-
-    <!-- HERO -->
-
     <section class="hero">
-
       <div class="container hero-grid">
 
-
         <div>
-
-          <div class="eyebrow">
-            Engineering • Manufacturing • Digital
-          </div>
-
+          <div class="eyebrow">Engineering • Manufacturing • Digital</div>
 
           <h1>
-
             Turning Engineering
-
-            <span class="gradient-text">
-              Ideas Into Reality.
-            </span>
-
+            <span class="gradient-text">Ideas Into Reality.</span>
           </h1>
 
-
           <p class="hero-text">
-
-            TS TECHSOLUTIONL combines mechanical engineering,
-            manufacturing, product visualization and digital
-            technology to transform concepts into practical
-            solutions.
-
+            TS TECHSOLUTIONL combines mechanical engineering, manufacturing,
+            product visualization and digital technology to transform concepts
+            into practical solutions.
           </p>
 
-
           <div class="hero-buttons">
+            <a class="btn btn-primary" href="#contact">Start a Project →</a>
+            <a class="btn btn-secondary" href="#services">Explore Services</a>
+          </div>
+        </div>
 
-            <a
-              class="btn btn-primary"
-              href="#contact"
-            >
-              Start a Project →
-            </a>
+        <div class="hero-panel">
+          <div class="machine">
+            <div class="machine-core"></div>
+          </div>
+
+          <div class="hero-badge">
+            ⚙️ From concept and CAD design to prototype, manufacturing and digital solutions.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">What We Do</div>
+          <h2>Engineering solutions built for real-world applications.</h2>
+          <p>
+            We connect design, engineering, manufacturing and digital technology
+            in one workflow.
+          </p>
+        </div>
+
+        <div class="cards">
+
+          <article class="card">
+            <div class="icon">⚙️</div>
+            <h3>Mechanical Engineering</h3>
+            <p>
+              CAD design, machine design, product development, 3D modeling,
+              assemblies and engineering documentation.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏭</div>
+            <h3>Manufacturing</h3>
+            <p>
+              CNC machining, 3D printing, rapid prototyping, fabrication and
+              practical manufacturing support.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">◈</div>
+            <h3>Visualization & Digital</h3>
+            <p>
+              Product rendering, 3D visualization, animation, exploded views
+              and technical illustrations.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon">💻</div>
+            <h3>Web & IT Solutions</h3>
+            <p>
+              Websites, web applications, engineering software and digital
+              tools for modern technical businesses.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITIES -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Capabilities</div>
+          <h2>One team across the engineering workflow.</h2>
+        </div>
+
+        <div class="capability-grid">
+          <div class="capability"><span>✓</span> CAD & 3D Modeling</div>
+          <div class="capability"><span>✓</span> Machine Design</div>
+          <div class="capability"><span>✓</span> Product Development</div>
+          <div class="capability"><span>✓</span> Engineering Drawings</div>
+          <div class="capability"><span>✓</span> CNC Machining</div>
+          <div class="capability"><span>✓</span> 3D Printing</div>
+          <div class="capability"><span>✓</span> Rapid Prototyping</div>
+          <div class="capability"><span>✓</span> Product Rendering</div>
+          <div class="capability"><span>✓</span> Technical Animation</div>
+          <div class="capability"><span>✓</span> Simulation & Visualization</div>
+          <div class="capability"><span>✓</span> Web Development</div>
+          <div class="capability"><span>✓</span> Digital Engineering Tools</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Our Process</div>
+          <h2>From idea to implementation.</h2>
+          <p>
+            A structured workflow designed to move projects from concept toward
+            a practical deliverable.
+          </p>
+        </div>
+
+        <div class="process">
+          <div class="process-item">
+            <span class="process-num">01</span>
+            <strong>Discover</strong>
+          </div>
+
+          <div class="process-item">
+            <span class="process-num">02</span>
+            <strong>Design</strong>
+          </div>
+
+          <div class="process-item">
+            <span class="process-num">03</span>
+            <strong>Engineer</strong>
+          </div>
+
+          <div class="process-item">
+            <span class="process-num">04</span>
+            <strong>Prototype</strong>
+          </div>
+
+          <div class="process-item">
+            <span class="process-num">05</span>
+            <strong>Manufacture</strong>
+          </div>
+
+          <div class="process-item">
+            <span class="process-num">06</span>
+            <strong>Deliver</strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Projects</div>
+          <h2>Engineering concepts with practical outcomes.</h2>
+          <p>
+            Selected project areas demonstrating our multidisciplinary approach.
+          </p>
+        </div>
+
+        <div class="project-grid">
+
+          <article class="project">
+            <h3>Multi-Function CNC / 3D Printing Machine</h3>
+            <p>
+              Development of a multifunction machine concept combining
+              engineering, automation, machining and additive manufacturing.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Mechanical Product Design</h3>
+            <p>
+              Concept development, CAD modeling, assemblies and prototype-ready
+              mechanical components.
+            </p>
+          </article>
+
+          <article class="project">
+            <h3>Engineering Visualization</h3>
+            <p>
+              3D renders, technical illustrations, exploded views and
+              animations for communicating engineering concepts.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about-grid">
+
+        <div class="about-copy">
+          <div class="eyebrow">About Us</div>
+          <h2>Engineering Meets Technology.</h2>
+
+          <p>
+            TS TECHSOLUTIONL is focused on combining mechanical engineering,
+            manufacturing and digital technology to develop useful and practical
+            solutions.
+          </p>
+
+          <p>
+            Our approach connects the digital model with real engineering,
+            prototyping and manufacturing requirements.
+          </p>
+
+          <a class="btn btn-primary" href="#contact">Discuss Your Idea →</a>
+        </div>
+
+        <div class="about-points">
+
+          <div class="about-point">
+            <strong>Engineering First</strong>
+            <span>Solutions are developed around function, manufacturability and practical requirements.</span>
+          </div>
+
+          <div class="about-point">
+            <strong>Design to Prototype</strong>
+            <span>Move from concept and CAD to prototype-oriented engineering.</span>
+          </div>
+
+          <div class="about-point">
+            <strong>Integrated Capabilities</strong>
+            <span>Mechanical design, manufacturing, visualization and digital development under one workflow.</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CAREERS -->
+    <section class="section" id="careers">
+      <div class="container">
+
+        <div class="section-head">
+          <div class="eyebrow">Careers</div>
+          <h2>Build the future with TS TECHSOLUTIONL.</h2>
+          <p>
+            We are interested in people who enjoy engineering, design,
+            manufacturing and technology.
+          </p>
+        </div>
+
+        <div class="career-grid">
+
+          <article class="career">
+            <h3>Mechanical Design Engineer</h3>
+            <p>Mechanical systems, machine design, product development and engineering documentation.</p>
+          </article>
+
+          <article class="career">
+            <h3>CAD Designer / 3D Modeler</h3>
+            <p>3D CAD modeling, assemblies, drawings and design development.</p>
+          </article>
+
+          <article class="career">
+            <h3>Manufacturing / CNC</h3>
+            <p>CNC machining, prototyping, fabrication and manufacturing support.</p>
+          </article>
+
+          <article class="career">
+            <h3>3D Visualization Artist</h3>
+            <p>Product rendering, technical illustrations, animations and presentation visuals.</p>
+          </article>
+
+          <article class="career">
+            <h3>Software / Web Developer</h3>
+            <p>Websites, web applications and engineering-focused digital tools.</p>
+          </article>
+
+          <article class="career">
+            <h3>Engineering Intern / Trainee</h3>
+            <p>Opportunities to learn through practical engineering, CAD, manufacturing and technology projects.</p>
+          </article>
+
+        </div>
+
+        <div class="career-cta">
+          <div>
+            <h3>Interested in Joining Us?</h3>
+            <p>Send your CV, portfolio or project experience by email.</p>
+          </div>
+
+          <a
+            class="btn btn-primary"
+            href="mailto:tstechsolution.in@gmail.com?subject=Career%20Application%20-%20TS%20TECHSOLUTIONL"
+          >
+            Apply by Email →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+
+        <div class="contact-box">
+          <div class="eyebrow">Contact</div>
+
+          <h2>Let's build something useful.</h2>
+
+          <p class="muted">
+            For project enquiries, CAD work, manufacturing, visualization or
+            digital solutions, contact us by email.
+          </p>
+
+          <a
+            class="email"
+            href="mailto:tstechsolution.in@gmail.com?subject=Project%20Enquiry%20-%20TS%20TECHSOLUTIONL"
+          >
+            tstechsolution.in@gmail.com
+          </a>
+
+          <br>
+
+          <a
+            class="btn btn-primary"
+            href="mailto:tstechsolution.in@gmail.com?subject=Project%20Enquiry%20-%20TS%20TECHSOLUTIONL"
+          >
+            Send Project Enquiry →
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+          <a class="footer-logo" href="#home">
+            <img src="logo.png" alt="TS TECHSOLUTIONL Logo">
+          </a>
+
+          <p>
+            Mechanical Engineering, Manufacturing, Visualization and Digital
+            Solutions.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">Services</div>
+
+          <div class="footer-links">
+            <a href="#services">Mechanical Engineering</a>
+            <a href="#services">Manufacturing</a>
+            <a href="#services">Visualization & Digital</a>
+            <a href="#services">Web & IT Solutions</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Company</div>
+
+          <div class="footer-links">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#careers">Careers</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        © 2026 TS TECHSOLUTIONL. All Rights Reserved.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll("#navLinks a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+      });
+    });
+  </script>
+
+</body>
+</html>
